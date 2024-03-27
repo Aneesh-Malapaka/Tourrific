@@ -1,0 +1,35 @@
+<%= render :partial => 'layouts/navbar'%>
+<main class="signup--main">
+    
+<section class="image--div" >
+    <%= image_tag "signupPage.jpg" %>
+    <p class="signup--line">
+        Embark on your new travel journey and join the community of travelling!
+    </p>
+</section>
+<section class="signup--section">
+    <h1>Sign Up Form</h1>
+
+<%= form_for @user do |form| %>
+
+    <div class="username" >
+        <%= form.label :username %><br>
+    <%= form.text_field :username %><br>
+    </div>
+    
+    <div class="email">
+        <%= form.label :email %><br>
+    <%= form.email_field :email %><br>
+    </div>
+
+   <div class="password">
+     <%= form.label :password %><br>
+    <%= form.password_field :password %><br>
+   </div>
+
+    <%= form.submit "Create Account"%>
+
+    <p class="login--link">Already have an account? <%= link_to "Login Here", "/login" %> </p>
+<% end %>
+</section>
+</main>

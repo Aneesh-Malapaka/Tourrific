@@ -1,0 +1,246 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "~swiper/swiper-bundle";
+@import "font-awesome";
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&family=Gloock&family=Jockey+One&family=Lato:ital,wght@0,400;0,700;1,300;1,400&family=Poppins:wght@300;400;500&family=Quicksand:wght@300;400;500;600&family=Secular+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  height: 10vh;
+  background: #232b3d;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  box-shadow: 6px 5px 21px 0px rgb(18 33 61 / 71%);
+}
+nav .logo--div {
+  line-height: 1;
+}
+nav .logo--div p {
+  font-size: 2rem;
+  margin-left: 10px;
+  font-family: "Dancing Script", sans-serif;
+}
+
+nav .logo--div span {
+  font-size: 0.9rem;
+  margin-left: 40px;
+  font-family: "Dancing Script", sans-serif;
+}
+main.signup--main,
+main.signin--main {
+  background: #171d2b;
+  color: white;
+  display: flex;
+  justify-content: left;
+  height: 90vh;
+  padding: 24px;
+  gap: 100px;
+}
+
+.signup--main .image--div,
+.signin--main .image--div {
+  position: relative;
+}
+
+.image--div img {
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 20px;
+}
+
+.image--div p {
+  position: absolute;
+  left: 3vw;
+  top: 198px;
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+  line-height: 56px;
+  text-shadow: 4px 3px 0px rgba(26, 25, 25, 0.29);
+}
+.signup--section,
+.signin--section {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 70%;
+}
+
+.signup--section form,
+.signin--section form {
+  background: #141b30;
+  box-shadow: 0px 0px 9px 0px rgb(43 47 65 / 42%);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 25px;
+  /* height: 59vh; */
+  border: 1px solid;
+  width: 30vw;
+}
+
+.signup--section form div,
+.signin--section form div {
+  width: 100%;
+}
+
+form div input {
+  width: 100%;
+  height: 46px;
+  background: #e3d9d9;
+  border: 1px solid rgba(0, 0, 0, 0.71);
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 10px;
+  outline: none;
+}
+
+form p.login--link,
+form p.signup--link {
+  color: white;
+  opacity: 0.5;
+  text-align: center;
+}
+
+form p.login--link:hover,
+form p.signup--link:hover {
+  opacity: 1;
+}
+form p.login--link > a,
+form p.signup--link > a {
+  color: white;
+  text-decoration: none;
+  opacity: 1;
+}
+
+main.homepage {
+  background: #141b30;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main.homepage section.carousel--recommendations {
+  height: 500px;
+  border: 2px solid;
+}
+main.homepage section.search {
+  height: 300px;
+  /* border: 2px solid red; */
+}
+
+section.search .search--box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search--box .search--toggle {
+  height: 100px;
+  width: 300px;
+  background-color: aquamarine;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: center;
+  position: relative;
+  top: -2em;
+  height: 65px;
+}
+
+.search--toggle p {
+  height: inherit;
+  position: relative;
+  padding: 17px;
+}
+
+.search--box .search--bar {
+  color: white;
+  width: 50%;
+}
+
+.search--bar .recent--searches ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 15px 0;
+}
+
+.recent--searches ul > li {
+  border: 2px solid pink;
+  padding: 10px 20px;
+  border-radius: 25px;
+}
+
+main.homepage section.popular--recommendations {
+  /* height: 500px; */
+  /* border: 2px solid red; */
+}
+
+.popular--destinations {
+  color: white;
+}
+
+.popular--destinations > p {
+  text-align: center;
+  border-bottom: 3px solid white;
+  width: max-content;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.popular--destinations .destination--cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.destination--cards .card {
+  box-sizing: border-box;
+  width: 343px;
+  border: 3px solid #ebe2e2;
+  border-radius: 31px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  scale: 0.87;
+}
+
+.card img {
+  width: 90%;
+  /* height: 350px; */
+  aspect-ratio: 4 / 3;
+  border-radius: 20px;
+}
+
+.card .attr--description {
+  border-left: 5px solid crimson;
+  padding: 0 0 0 10px;
+}

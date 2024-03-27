@@ -1,0 +1,28 @@
+<%= render :partial => 'layouts/navbar'%>
+<main class="signin--main">
+    
+<section class="image--div" >
+     <%= image_tag "signinpage.jpg" %>
+    <p class="signin--line">
+       Ready to travel again and make the best memories? 
+    </p>
+</section>
+<section class="signin--section">
+    <h1>Login Form</h1>
+
+<%= form_with url: "/login", method: :post do |form| %>
+
+    <div class="email">
+        <%= form.label :email %><br>
+    <%= form.email_field :email %><br>
+    </div>
+
+   <div class="password">
+     <%= form.label :password %><br>
+    <%= form.password_field :password %><br>
+   </div>
+
+    <%= submit_tag "Log in" %>
+<% end %>
+</section>
+</main>

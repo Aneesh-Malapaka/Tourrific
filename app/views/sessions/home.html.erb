@@ -1,0 +1,102 @@
+<%= render :partial => 'layouts/navbar'%>
+
+<main class="homepage">
+    <section class="carousel--recommendations">
+      
+    </section>
+    <section class="search">
+      <div class="search--box">
+        <div class="search--toggle">
+           <p> Search Your Next Destination </p>
+        </div>
+        <div class="search--bar">
+          <%= form_with url: "/", method: :post do |form| %>
+            <div class="email">
+            <%= form.text_field :query %><br>
+             <i class="fa-brands fa-font-awesome"></i>
+            </div>
+          <% end %>
+          <div class="recent--searches">
+            <p>Recent Searches</p>
+            <ul class="searches">
+              <li>Hyderabad</li>
+              <li>Bengaluru</li>
+              <li>Manali</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="popular--recommendations">
+      <div class="popular--destinations">
+        <p class="title">Popular Tourist Attractions</p>
+        <div class="destination--cards">
+          <div class="card">
+            
+              <img src="https://source.unsplash.com/random/400*400/?tour,beach%20tour,nice%20view%20tour" alt="tour">
+           
+             
+              <p class="attr--name">
+                Day Excursion To Chitradurga Fort From Bangalore With Lunch
+              </p>
+              <p class="attr--description">
+                Visit Chitradurga Fort that is situated in the midst of seven hills made of the oldest granite formation in the country. Huge boulders can be seen in the..
+              </p>
+            
+            <div class="btn">
+                <button>Book Your Trip Trip Now</button>
+            </div>
+          </div>
+          <div class="card">
+            
+              <img src="https://source.unsplash.com/random/400*400/?tour,beach%20tour,nice%20view%20tour" alt="tour">
+            
+             
+              <p class="attr--name">
+                Day Excursion To Chitradurga Fort From Bangalore With Lunch
+              </p>
+              <p class="attr--description">
+                Visit Chitradurga Fort that is situated in the midst of seven hills made of the oldest granite formation in the country. Huge boulders can be seen in the..
+              </p>
+           
+            <div class="btn">
+                <button>Book Your Trip Trip Now</button>
+            </div>
+          </div>
+          <div class="card">
+            
+              <img src="https://source.unsplash.com/random/400*400/?tour,beach%20tour,nice%20view%20tour" alt="tour">
+            
+             
+              <p class="attr--name">
+                Day Excursion To Chitradurga Fort From Bangalore With Lunch
+              </p>
+              <p class="attr--description">
+                Visit Chitradurga Fort that is situated in the midst of seven hills made of the oldest granite formation in the country. Huge boulders can be seen in the..
+              </p>
+            
+            <div class="btn">
+                <button>Book Your Trip Trip Now</button>
+            </div>
+          </div>
+          <div class="card">
+            
+              <img src="https://source.unsplash.com/random/400*400/?tour,beach%20tour,nice%20view%20tour" alt="tour">
+            
+             
+              <p class="attr--name">
+                Day Excursion To Chitradurga Fort From Bangalore With Lunch
+              </p>
+              <p class="attr--description">
+                Visit Chitradurga Fort that is situated in the midst of seven hills made of the oldest granite formation in the country. Huge boulders can be seen in the..
+              </p>
+            
+            <div class="btn">
+                <button>Book Your Trip Trip Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popular--stays"></div>
+    </section>
+</main>
