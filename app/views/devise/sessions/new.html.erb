@@ -1,0 +1,41 @@
+<%= render :partial => 'layouts/navbar'%>
+<main class="signin--main">
+    
+<section class="image--div" >
+     <%= image_tag "signinpage.jpg" %>
+    <p class="signin--line">
+       Ready to travel again and make the best memories? 
+    </p>
+</section>
+<section class="signin--section">
+    <h1>Login Form</h1>
+
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field email">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field email">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "current-password" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "Log in" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+</section>
+</main>
+

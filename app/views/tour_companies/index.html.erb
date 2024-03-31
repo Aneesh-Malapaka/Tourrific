@@ -1,0 +1,8 @@
+<h1><%= @company.company_name%> </h1>
+<h2><%= @company.description%> </h2>
+<h3>rating <%= @company.rating%> </h3>
+<p>owned by <%= @user.email%> </p>
+<p>id <%= @user.id%> </p>
+<p>but currently user is  <%= @user_now.id%> and he has</p>
+<li><%= button_to "logout", destroy_user_session_path, method: :delete  %>
+    </li>

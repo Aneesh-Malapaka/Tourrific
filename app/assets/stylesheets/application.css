@@ -99,7 +99,7 @@ main.signin--main {
   width: 100%;
 }
 
-form div input {
+form div input:not([type="radio"]):not([type="checkbox"]) {
   width: 100%;
   height: 46px;
   background: #e3d9d9;

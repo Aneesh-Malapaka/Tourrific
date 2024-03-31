@@ -1,0 +1,30 @@
+<h1>This is where u create ur company</h1>
+
+<%= @user_build.attributes.each do |key, value|%>
+
+    <li><%=key%>,<%= value%> </li>
+    <%end%>
+<%= form_with model: @tour_company, url: tour_companies_path do |form| %>
+  <div>
+    <%= form.label :company_name %><br>
+    <%= form.text_field :company_name %>
+    
+  </div>
+
+  <div>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %><br>
+   
+  </div>
+  <div>
+    <%= form.label :rating %><br>
+    <%= form.number_field :rating %><br>
+   
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+<li><%= button_to "logout", destroy_user_session_path, method: :delete  %>
+    </li>
