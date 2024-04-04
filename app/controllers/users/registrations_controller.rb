@@ -23,9 +23,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
   
   
-    def create
-      super
-      @user.update(role: params[:user][:role].to_i)
-    end
+  def create
+    super
+    @user.update(role: params[:user][:role].to_i)
+  end
 end
 

@@ -1,0 +1,37 @@
+<div id="<%= dom_id destination %>">
+  <p>
+    <strong>Dest name:</strong>
+    <%= destination.dest_name %>
+  </p>
+
+  <p>
+    <strong>Location:</strong>
+    <ul>
+      <li><%= destination.location ?  JSON.parse(destination.location.gsub("=>",":"))["location_city"]: "No"%></li>
+      <li><%= destination.location ?  JSON.parse(destination.location.gsub("=>",":"))["location_state"]: "No"%></li>
+      <li><%= destination.location ?  JSON.parse(destination.location.gsub("=>",":"))["location_country"]: "No"%></li>
+      <li><%= destination.location ?  JSON.parse(destination.location.gsub("=>",":"))["location_country_code"]: "No"%></li>
+      
+    </ul>
+  </p>
+
+  <p>
+    <strong>Rating:</strong>
+    <%= destination.rating %>
+  </p>
+
+  <p>
+    <strong>Main photo:</strong>
+   <% if destination.main_image.attached? %>
+     <%= image_tag destination.main_image.variant(resize_to_limit: [150, nil]) %>
+   <% else %>
+     No photo yet. Pls update now!
+   <% end %>
+  </p>
+
+  <p>
+    <strong>Tour company:</strong>
+    <%= destination.tour_company_id %>
+  </p>
+
+</div>

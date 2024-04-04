@@ -12,6 +12,7 @@ class SessionsController < ApplicationController
     # end
 
     def home
+        @user = current_user
         puts 'login'
         render 'home'
     end

@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Destinations</h1>
+
+<div id="destinations">
+  <% @destinations.each do |destination| %>
+    <%= render destination %>
+    <p>
+      <%= link_to "Show this destination", tour_company_destination_path(destination.tour_company, destination) %>
+    </p>
+  <% end %>
+</div>
+<br><br>
+<%= link_to "New destination", new_tour_company_destination_path %>
+<%= link_to "Back to your profile", tour_companies_path %>
+

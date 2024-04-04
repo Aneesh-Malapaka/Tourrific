@@ -5,5 +5,8 @@
 <p>owned by <%= @user_now.email%> </p>
 <p>id <%= @user_now.id%> </p>
 <p>but currently user is  <%= @user_now.id%> and he has</p>
+
+<%= link_to "Create New Destination", new_tour_company_destination_path(@company)  %>
+<%= link_to "See your destinations", tour_company_destinations_path(@user_now.tour_company)%>
 <li><%= button_to "logout", destroy_user_session_path, method: :delete  %>
     </li>

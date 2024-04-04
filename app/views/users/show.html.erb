@@ -1,0 +1,55 @@
+<%= render "layouts/navbarHome"%>
+<main class="user--profile">
+    <div class="profile--side">
+        <div class="profile--picture">
+        <img src="https://source.unsplash.com/random/860*860/?tour,beach%20tour,nice%20view%20tour" alt="pfp">
+        </div>
+        <div class="profile--info">
+            <p class="profile-field">Email: <span class="profile--data"><%= @user.email ? @user.email : "Not set yet!"%></span> </p>
+            <p class="profile-field">Username: <span class="profile--data"><%= @user.username ? @user.username : "Not set yet!"%></span> </p>
+            <p class="profile-field">Phone number: <span class="profile--data"><%= @user.phone ? @user.phone : "Not set yet!" %></span> </p>
+            <p class="profile-field">Country: <span class="profile--data"><%= @user.country ? @user.country : "Not set yet!"%></span> </p>
+            <p class="profile-field">City: <span class="profile--data"><%= @user.location ? @user.location : "Not set yet!"%></span> </p>
+
+            <div class="profile--links">
+                <%= link_to "Edit Your Profile", edit_user_path(@user)%>
+                <%= link_to "Go Back", root_path %>
+            </div>
+        </div>
+    </div>
+    <div class="past--trips">
+        <h2>You Can View Your Past Trips and Stays Here</h2>
+        <div class="pastTrips--box">
+            <div class="trip--past">
+               <img src="https://source.unsplash.com/random/860*860/?tour" alt="tour_pic">
+                <div class="info--side">
+                    <div class="top">
+                        <p class="tour--name">Hyderabad Tour</p>
+                    </div>
+                    <div class="middle">
+                        <p class="start--date">03/04/2024</p>
+                        <p class="end--date">05/04/2024</p>
+                    </div>
+                    <div class="bottom">
+                        <p class="managed--by">Anee Tours</p>
+                    </div>
+                </div>
+            </div>
+            <div class="trip--past">
+               <img src="https://source.unsplash.com/random/460*460/?beach" alt="tour_pic">
+                <div class="info--side">
+                    <div class="top">
+                        <p class="tour--name">Hyderabad Tour</p>
+                    </div>
+                    <div class="middle">
+                        <p class="start--date">03/04/2024</p>
+                        <p class="end--date">05/04/2024</p>
+                    </div>
+                    <div class="bottom">
+                        <p class="managed--by">Anee Tours</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
